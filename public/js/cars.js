@@ -23,7 +23,7 @@ function addCarsToDOM(cars) {
 
 function fetchJSON() {
   var url = baseUrl + pageNumber + "/3";
-  pageNumber += 1;
+  pageNumber += 1; 
   $.ajax({
     url: url,
     contentType: 'application/json',
