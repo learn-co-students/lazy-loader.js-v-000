@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite tests="3" errors="0" failures="1" time="2.015" timestamp="2016-03-07T23:05:54">
+		<testcase classname="Cars" name="formatCars turns car JSON into Bootstrapped HTML" time="0.003">
+		</testcase>
+		<testcase classname="Cars" name="addCarsToDOM accepts JSON, sends it to formatCars(), and adds return HTML to page" time="0.005">
+		</testcase>
+		<testcase classname="Cars" name="fetchJSON queries API for the correct listing and passes returned data to addCarsToDOM()" time="2.005">
+			<failure type="toEqual" message="Expected &amp;apos;Subaru&amp;apos; to equal &amp;apos;Mercedes-Benz&amp;apos;.">
+stack@file:///usr/local/opt/rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/learn-test-1.2.25/lib/learn_test/jasmine/jasmine.js:1293:37
+buildExpectationResult@file:///usr/local/opt/rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/learn-test-1.2.25/lib/learn_test/jasmine/jasmine.js:1270:19
+expectationResultFactory@file:///usr/local/opt/rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/learn-test-1.2.25/lib/learn_test/jasmine/jasmine.js:484:40
+addExpectationResult@file:///usr/local/opt/rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/learn-test-1.2.25/lib/learn_test/jasmine/jasmine.js:260:70
+addExpectationResult@file:///usr/local/opt/rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/learn-test-1.2.25/lib/learn_test/jasmine/jasmine.js:442:41
+file:///usr/local/opt/rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/learn-test-1.2.25/lib/learn_test/jasmine/jasmine.js:1209:32
+file:///home/nitrous/code/labs/lazy-loader.js-v-000/spec/01-jasmine/cars-spec.js:56:50			</failure>
+			<failure type="toEqual" message="Expected &amp;apos;Model: Impreza WRX&amp;apos; to equal &amp;apos;Model: C-Class&amp;apos;.">
+stack@file:///usr/local/opt/rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/learn-test-1.2.25/lib/learn_test/jasmine/jasmine.js:1293:37
+buildExpectationResult@file:///usr/local/opt/rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/learn-test-1.2.25/lib/learn_test/jasmine/jasmine.js:1270:19
+expectationResultFactory@file:///usr/local/opt/rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/learn-test-1.2.25/lib/learn_test/jasmine/jasmine.js:484:40
+addExpectationResult@file:///usr/local/opt/rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/learn-test-1.2.25/lib/learn_test/jasmine/jasmine.js:260:70
+addExpectationResult@file:///usr/local/opt/rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/learn-test-1.2.25/lib/learn_test/jasmine/jasmine.js:442:41
+file:///usr/local/opt/rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/learn-test-1.2.25/lib/learn_test/jasmine/jasmine.js:1209:32
+file:///home/nitrous/code/labs/lazy-loader.js-v-000/spec/01-jasmine/cars-spec.js:57:50			</failure>
+			<failure type="toEqual" message="Expected &amp;apos;Year: 2013&amp;apos; to equal &amp;apos;Year: 2014&amp;apos;.">
+stack@file:///usr/local/opt/rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/learn-test-1.2.25/lib/learn_test/jasmine/jasmine.js:1293:37
+buildExpectationResult@file:///usr/local/opt/rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/learn-test-1.2.25/lib/learn_test/jasmine/jasmine.js:1270:19
+expectationResultFactory@file:///usr/local/opt/rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/learn-test-1.2.25/lib/learn_test/jasmine/jasmine.js:484:40
+addExpectationResult@file:///usr/local/opt/rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/learn-test-1.2.25/lib/learn_test/jasmine/jasmine.js:260:70
+addExpectationResult@file:///usr/local/opt/rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/learn-test-1.2.25/lib/learn_test/jasmine/jasmine.js:442:41
+file:///usr/local/opt/rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/learn-test-1.2.25/lib/learn_test/jasmine/jasmine.js:1209:32
+file:///home/nitrous/code/labs/lazy-loader.js-v-000/spec/01-jasmine/cars-spec.js:58:53			</failure>
+		</testcase>
+	</testsuite>
+</testsuites>
+
