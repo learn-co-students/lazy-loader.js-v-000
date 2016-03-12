@@ -2,7 +2,7 @@ require_relative '../config/environment'
 require_relative '02-features/fixtures/spec_support'
 
 require 'capybara'
-require 'capybara/rspec'
+require "capybara/rspec"
 require 'rack/test'
 
 include SpecSupport::Cars
@@ -20,4 +20,3 @@ end
 
 Capybara.current_driver = Capybara.javascript_driver
 Capybara.app = app
-
