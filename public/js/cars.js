@@ -37,5 +37,6 @@ function fetchJSON() {
 		dataType: 'jsonp',
 		success: function(data) {	addCarsToDOM(data); }
 	});
+	carLoadIndex += 1;
 }
 

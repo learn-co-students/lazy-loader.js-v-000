@@ -9,5 +9,6 @@ function getModel(carDiv) {
 }
 
 function getYearDate(carDiv) {
+	// return carDiv.find("p").last().text();
   return carDiv.children("p").last().text();
 }
