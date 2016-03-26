@@ -1,6 +1,9 @@
 "use strict";
 
 $(document).ready(function() {
-  // add click listener here
-  // it should call on fetchJSON()
+  var initialCarsIndex = 0;
+  $('#load-cars').on('click', function() {
+    initialCarsIndex += 6
+    fetchJSON(initialCarsIndex);
+  })
 });
