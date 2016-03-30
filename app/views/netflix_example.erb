@@ -1,24 +1,69 @@
 <html>
   <head>
-    <title>Netflix</title>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <title>Cars</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/jquery.min.js"></script>
   </head>
   <body>
-    <h1>Netflix Stock Price</h1>
-    <div id="netflix-price"><i class="fa fa-spinner fa-spin"></i> Fetching Data...</div>
-    <script>
-      var url = "http://dev.markitondemand.com/Api/v2/Quote/jsonp?symbol=NFLX";
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Car Model Lazy Load</h1>
+      </div>
+    </div>
+    <div class="container">
+      <div id="cars">
 
-      $.ajax({
-        url: url,
-        contentType: 'application/json',
-        dataType: 'jsonp',
-        success: function(data) {
-          var price = data["LastPrice"];
-          $("#netflix-price").html("$" + price);
-        }
-      });
-    </script>
+        <div class="row">
+          <div class="col-md-4 car">
+            <h2>Chevrolet</h2>
+            <p><strong>Model:</strong> Tahoe</p>
+            <p><strong>Year:</strong> 2012</p>
+          </div>
+          <div class="col-md-4 car">
+            <h2>Toyota</h2>
+            <p><strong>Model:</strong> Camry</p>
+            <p><strong>Year:</strong> 2002</p>
+          </div>
+          <div class="col-md-4 car">
+            <h2>Mercedes-Benz</h2>
+            <p><strong>Model:</strong> E-Class</p>
+            <p><strong>Year:</strong> 1998</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 car">
+            <h2>GMC</h2>
+            <p><strong>Model:</strong> Acadia</p>
+            <p><strong>Year:</strong> 2013</p>
+          </div>
+          <div class="col-md-4 car">
+            <h2>Ford</h2>
+            <p><strong>Model:</strong> Fusion</p>
+            <p><strong>Year:</strong> 2011</p>
+          </div>
+          <div class="col-md-4 car">
+            <h2>Chrysler</h2>
+            <p><strong>Model:</strong> 300</p>
+            <p><strong>Year:</strong> 2005</p>
+          </div>
+        </div><!-- row -->
+
+        <!-- more cars should get added here -->
+        <!-- even more cars should get added here -->
+        <!-- et cetera -->
+
+      </div><!-- car div -->
+      <br>
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4 center">
+          <button class="btn btn-success" id="load-cars">Load more cars</button>
+        </div>
+      </div><!-- row -->
+      <br>
+      <br>
+    </div><!-- container -->
+    <script src="js/cars.js"></script>
+    <script src="js/on-click.js"></script>
   </body>
 </html>
