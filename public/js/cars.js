@@ -3,7 +3,6 @@
 // this is the base API url
 var baseUrl = "http://mimeocarlisting.azurewebsites.net/api/cars/";
 // var arr
-var arr2
 var counter = counter || 2
 
 function formatCars(carsJSON) {
@@ -15,11 +14,12 @@ function formatCars(carsJSON) {
     
          return  "<div class='col-md-4 car'>" +
             "<h2>" + item["Make"] + "</h2>" +
-            "<p><strong>Model: </strong>" + item["Model"] + "</p>" +
-            "<p><strong>Year: </strong>" + item["Year"] + "</p>" +
+            "<p><strong>Model:</strong> " + item["Model"] + "</p>" +
+            "<p><strong>Year:</strong> " + item["Year"] + "</p>" +
             "</div>"
   })
-  return "<div class='row'>" + arr.join(",")
+  var str = "<div class='row'>" + arr.join("") + "</div>";
+  return str.replace(/'/g, '"');
 }
 
 function addCarsToDOM(carsJSON) {
@@ -28,22 +28,23 @@ function addCarsToDOM(carsJSON) {
   // add the resulting HTML to the div with an id of "cars"
 
   $("#cars .row:last").after(formatCars(carsJSON))
+
   // problem is each time i click, it returns the same ones.  fetch JSON problem
 }
 
 
-function fetchJSON(counter) {
+function fetchJSON() {
   // this function will make the ajax call
   // on success of the ajax call, it will pass the returned data
   // to addCarsToDOM()
+  counter += 1
   $.ajax({
-          // url: "http://mimeocarlisting.azurewebsites.net/api/cars/2/6",
-          url: "http://mimeocarlisting.azurewebsites.net/api/cars/" + counter + "/6",
+          url: baseUrl + counter + "/3",
 
           contentType: 'application/json',
           dataType: 'jsonp',
           success: function(data) {
-          addCarsToDOM(data);
+            addCarsToDOM(data);
           }
         });
 }
