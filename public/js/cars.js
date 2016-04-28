@@ -5,24 +5,22 @@ var baseUrl = "http://mimeocarlisting.azurewebsites.net/api/cars/";
 
 function formatCars(carsJSON) {
 
-  var cars = carsJSON
-  var carStrings = $.map(cars, function(car, index) {
-    return  "<h2>" + car["Make"] + "</h2>" + "<p><strong>" + "Model:" + "</strong>" + " " + car["Model"] + "</p>" + "<p><strong>" + "Year:" + "</strong>" + " " + car["Year"] + "</p>"
+  var row = "<div class=\"row\">"
+  $.each(carsJSON, function(index, car) {
+    row += '<div class="col-md-4 car">'
+    row += "<h2>" + car.Make + "</h2>"
+    row += "<p><strong>Model:</strong> " + car.Model + "</p>"
+    row += "<p><strong>Year:</strong> " + car.Year + "</p>"
+    row += "</div>"
   })
-
-  var carDivs = $.map(carStrings, function(car, index) {
-    return '<div class="col-md-4 car">' + car + "</div>"
-  })
-
-  var wrappedCars = '<div class="row">' + (carDivs.join("")) + "</div>"
-  return wrappedCars
+  row += "</div>"
+  return row
 }
 
 function addCarsToDOM(carsJSON) {
 
   var cars = formatCars(carsJSON)
-  $('div#cars .row').last().after(cars)
-
+  $('#cars').append(cars)
 }
 
 function fetchJSON() {
@@ -33,8 +31,7 @@ function fetchJSON() {
     contentType: 'application/json',
     dataType: 'jsonp', 
     success: function(data) {
-      var carsJSON = data;
-      addCarsToDOM(carsJSON);
+      addCarsToDOM(data);
     }
   })
 }
