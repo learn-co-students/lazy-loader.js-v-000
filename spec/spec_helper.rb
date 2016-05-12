@@ -8,6 +8,9 @@ Bundler.require(:default, :test)
 require 'capybara'
 require 'capybara/rspec'
 require 'rack/test'
+require 'selenium/webdriver'
+
+
 
 include SpecSupport::Cars
 include SpecSupport::ClickCars
