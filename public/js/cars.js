@@ -17,16 +17,17 @@ function formatCars(carsJSON) {
 }
 
 function addCarsToDOM(carsJSON) {
-  debugger
   $('#cars').append(formatCars(carsJSON))
 }
 
 function fetchJSON() {
   $.ajax({
     url: baseUrl + page + "/3/",
-    contentType: 'application/json',
-    dataType: 'jsonp',
-    success: addCarsToDOM
+    dataType: 'jsonp'
+  })
+  .done(function(cars){
+    addCarsToDOM(cars);
+    page++;
   });
-  page++;
+
 }
