@@ -24,3 +24,4 @@ end
 
 Capybara.current_driver = Capybara.javascript_driver
 Capybara.app = app
+
