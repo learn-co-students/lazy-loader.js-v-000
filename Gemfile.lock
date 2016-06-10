@@ -106,6 +106,3 @@ DEPENDENCIES
   shotgun
   sinatra
   sinatra-activerecord
-
-BUNDLED WITH
-   1.11.2
