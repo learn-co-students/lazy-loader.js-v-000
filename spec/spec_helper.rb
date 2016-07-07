@@ -9,6 +9,10 @@ require 'capybara'
 require 'capybara/rspec'
 require 'rack/test'
 
+Capybara.register_driver :selenium do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :chrome)
+end
+
 include SpecSupport::Cars
 include SpecSupport::ClickCars
 
