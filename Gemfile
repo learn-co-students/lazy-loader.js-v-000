@@ -7,11 +7,8 @@ gem 'rake'
 gem 'require_all'
 gem 'pry'
 gem 'shotgun'
-
-group :test do
-  gem 'rspec'
-  gem 'capybara'
-  gem 'rack-test'
-  gem 'launchy'
-  gem 'selenium-webdriver'
-end
+gem 'rspec'
+gem 'capybara'
+gem 'rack-test'
+gem 'launchy'
+gem 'selenium-webdriver'
