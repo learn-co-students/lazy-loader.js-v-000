@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+gem 'learn-co'
+gem 'learn-test'
 gem 'sinatra'
 gem 'activerecord', :require => 'active_record'
 gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
