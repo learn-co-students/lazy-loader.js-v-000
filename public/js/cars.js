@@ -3,6 +3,7 @@
 // this is the base API url
 var baseUrl     = "http://mimeocarlisting.azurewebsites.net/api/cars/";
 var pageNumber  = 3;
+
 function formatCars(carsJSON) {
   // this function should return a string of properly formatted html
   // refer to app/views/index.erb lines 16 - 22 for an example of how
