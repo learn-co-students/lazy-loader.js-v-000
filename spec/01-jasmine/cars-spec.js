@@ -10,8 +10,6 @@ describe('Cars', function() {
     it('turns car JSON into Bootstrapped HTML', function() {
       var carsOneJSON = [{"Make":"Dodge","Model":"Avenger","Year":"2013"},{"Make":"Nissan","Model":"Maxima","Year":"2009"},{"Make":"Subaru","Model":"Impreza WRX","Year":"2013"}];
       var htmlOne = '<div class="row"><div class="col-md-4 car"><h2>Dodge</h2><p><strong>Model:</strong> Avenger</p><p><strong>Year:</strong> 2013</p></div><div class="col-md-4 car"><h2>Nissan</h2><p><strong>Model:</strong> Maxima</p><p><strong>Year:</strong> 2009</p></div><div class="col-md-4 car"><h2>Subaru</h2><p><strong>Model:</strong> Impreza WRX</p><p><strong>Year:</strong> 2013</p></div></div>';
-      console.log("blah");
-      debugger;
       var resultOne = formatCars(carsOneJSON);
       expect(resultOne).toEqual(htmlOne);
       
