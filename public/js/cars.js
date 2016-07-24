@@ -14,7 +14,6 @@ function formatCars(carsJSON) {
   for (var i = 0; i < carsJSON.length ; i++) {
     html += '<div class="col-md-4 car"><h2>'+carsJSON[i].Make+'</h2><p><strong>Model:</strong> '+carsJSON[i].Model+'</p><p><strong>Year:</strong> '+carsJSON[i].Year+'</p></div>'
   };
-  $('.row').append(html);
   let result = '<div class="row">'+html+'</div>';
   return result;
 }
@@ -32,11 +31,11 @@ function fetchJSON() {
   // this function will make the ajax call
   // on success of the ajax call, it will pass the returned data
   // to addCarsToDOM()
-  baseUrl     += pageNumber + "/3";
+  var url      = baseUrl + pageNumber + "/3";
   pageNumber  += 1;
 
   $.ajax({
-    url: baseUrl,
+    url: url,
     contentType: 'application/json',
     dataType: 'jsonp',
     success: function(data) {
