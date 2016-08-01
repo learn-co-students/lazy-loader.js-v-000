@@ -16,7 +16,7 @@ function formatCars(carsJSON) {
 //        "<p><strong>Year:</strong> " + car.Year + "</p>";
 //      "</div>";
 //  });
-  $('#cars').append(rowDiv);
+  $('#cars').append("testing");
 }
 
 
@@ -33,7 +33,7 @@ function fetchJSON() {
   // to addCarsToDOM()
   var pageNumber = 3;
   var url = baseUrl + pageNumber + '/3';
-  var pageNumber +=1;
+//  var pageNumber += 1;
   $.ajax({
     url: url
     contentType: 'application/json'
@@ -42,4 +42,5 @@ function fetchJSON() {
       addCarsToDOM(data);
     };
   });
+  debugger;
 }

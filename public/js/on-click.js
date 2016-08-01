@@ -5,5 +5,5 @@ $(document).ready(function() {
   // it should call on fetchJSON()
   $('#load-cars').on('click', function(){
     fetchJSON();
-  }):
+  })
 });
