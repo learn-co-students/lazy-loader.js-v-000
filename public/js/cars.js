@@ -8,15 +8,18 @@ function formatCars(carsJSON) {
   // refer to app/views/index.erb lines 16 - 22 for an example of how
   // to format three cars, each in a div with a class "col-md-4", in a
   // div with a class "row"
-  var rowDiv = "<div class='TEST'>";
-//  var newCars = $.map(carsJSON, function(index, car){
-//      "<div class='col-md-4 car'>";
-//        "<h2>" + car.Make + "</h2>";
-//        "<p><strong>Model:</strong> " + car.Model + "</p>";
-//        "<p><strong>Year:</strong> " + car.Year + "</p>";
-//      "</div>";
-//  });
-  $('#cars').append("testing");
+  var divRow = '<div class="row">';
+  $.each(carsJSON, function(index, car){
+//      $('#cars div.row:last').append(
+        divRow += '<div class="col-md-4 car">';
+        divRow += '<h2>' + car.Make + '</h2>';
+        divRow += '<p><strong>Model:</strong> ' + car.Model + '</p>';
+        divRow += '<p><strong>Year:</strong> ' + car.Year + '</p>';
+        divRow += '</div>';
+//      "</div>");
+  });
+  divRow += '</div>'
+  return divRow;
 }
 
 
@@ -24,7 +27,7 @@ function addCarsToDOM(carsJSON) {
   // this function should pass carsJSON to formatCars() and then
   // add the resulting HTML to the div with an id of "cars"
   var result = formatCars(carsJSON);
-  $('#cars').html(result);
+  $('#cars').append(result);
 }
 
 function fetchJSON() {
@@ -33,14 +36,13 @@ function fetchJSON() {
   // to addCarsToDOM()
   var pageNumber = 3;
   var url = baseUrl + pageNumber + '/3';
-//  var pageNumber += 1;
+  var pageNumber = pageNumber + 1;
   $.ajax({
-    url: url
-    contentType: 'application/json'
-    dataType: 'jsonp'
+    url: url,
+    contentType: 'application/json',
+    dataType: 'jsonp',
     success: function(data){
       addCarsToDOM(data);
-    };
+    }
   });
-  debugger;
 }
