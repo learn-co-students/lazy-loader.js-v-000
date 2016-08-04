@@ -63,6 +63,24 @@
       <br>
       <br>
     </div><!-- container -->
+    <script src="js/handlebars.js"></script>
+
+    <script id="cars-template" type="text/x-handlebars-template">
+      <div class="row">
+        {{#each cars}}
+          {{> carDetails}}
+        {{/each}}
+      </div>
+    </script>
+
+    <script id="car-details-partial" type="text/x-handlebars-template">
+      <div class="col-md-4 car">
+        <h2>{{Make}}</h2>
+        <p><strong>Model:</strong> {{Model}}</p>
+        <p><strong>Year:</strong> {{Year}}</p>
+      </div>
+    </script>
+
     <script src="js/cars.js"></script>
     <script src="js/on-click.js"></script>
   </body>
