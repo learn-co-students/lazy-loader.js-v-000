@@ -9,6 +9,9 @@ require 'capybara'
 require 'capybara/rspec'
 require 'rack/test'
 
+require 'capybara/poltergeist'
+Capybara.javascript_driver = :poltergeist
+
 include SpecSupport::Cars
 include SpecSupport::ClickCars
 
