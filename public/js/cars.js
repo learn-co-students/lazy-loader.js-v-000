@@ -11,12 +11,12 @@ function formatCars(carsJSON) {
   // div with a class "row"
   var newCarsArray = [];    
 
-  $.each(carsJSON, function(key, value) { 
+  $.each(carsJSON, function(index, car) { 
     newCarsArray.push(`
             <div class="col-md-4 car">
-            <h2>${value['Make']}</h2>
-            <p><strong>Model: </strong>${value['Model']}</p>
-            <p><strong>Year: </strong>${value['Year']}</p>
+            <h2>${car['Make']}</h2>
+            <p><strong>Model: </strong>${car['Model']}</p>
+            <p><strong>Year: </strong>${car['Year']}</p>
             </div>
            `)
   });
@@ -39,6 +39,9 @@ function fetchJSON() {
     dataType: 'jsonp',
     success: function(data) {
       addCarsToDOM(data);
+    },
+    error: function(response) {
+      $('body').text("Sorry, there was an error with the request. Please refresh the page.")
     }
   });    
   pageNum++;
