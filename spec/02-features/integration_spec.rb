@@ -1,6 +1,6 @@
 feature "Integration Test", js: :true  do
   before(:each) do
-    visit "/"
+    visit "http://localhost:9292/"
   end
 
   it "displays the cars index page with a button to load more cars" do
