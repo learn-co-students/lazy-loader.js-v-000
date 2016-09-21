@@ -5,15 +5,15 @@ var baseUrl = "http://mimeocarlisting.azurewebsites.net/api/cars/";
 var page = 3;
 
 function formatCars(carsJSON) {
-  var html = '<div class="row">';
+  var html = '<div class="row">'
   $.each(carsJSON, function(index, car) {
     html += '<div class="col-md-4 car">';
-    html += `<h2>${car.Make}</h2>`;
-    html += `<p><strong>Model:</strong> ${car.Model}</p>`;
-    html += `<p><strong>Year:</strong> ${car.Year}</p>`;
-    html += '</div>';
+    html += "<h2>" + car.Make + "</h2>";
+    html += "<p><strong>Model:</strong> " + car.Model + "</p>";
+    html += "<p><strong>Year:</strong> " + car.Year + "</p>";
+    html += "</div>";
   });
-  html += '</div>';
+  html += "</div>"
   return html;
 }
 
@@ -22,7 +22,7 @@ function addCarsToDOM(carsJSON) {
 }
 
 function fetchJSON() {
-  var url = baseUrl + page + '/3';
+  var url = baseUrl + page + "/3";
   page += 1;
 
   $.ajax({
