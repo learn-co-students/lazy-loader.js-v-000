@@ -22,5 +22,7 @@ def app
   Rack::Builder.parse_file('config.ru').first
 end
 
+Capybara.javascript_driver = :selenium
+
 Capybara.current_driver = Capybara.javascript_driver
 Capybara.app = app
