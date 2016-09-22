@@ -1,4 +1,6 @@
-feature "Integration Test", js: :true  do
+Capybara.current_driver = :selenium_chrome
+
+feature "Integration Test", js: :true do
   before(:each) do
     visit "/"
   end
@@ -25,7 +27,7 @@ feature "Integration Test", js: :true  do
     expect(second_to_last_car_model).to eq("Model: A4")
     expect(second_to_last_car_year).to eq("Year: 2012")
 
-    
+
     expect(last_car_brand).to eq("Mercedes-Benz")
     expect(last_car_model).to eq("Model: C-Class")
     expect(last_car_year).to eq("Year: 2014")
@@ -34,7 +36,7 @@ feature "Integration Test", js: :true  do
   it "adds three cars on first click, three new cars on next click" do
     click_for_cars
     expect(page).to have_selector('.car', count: 9)
-    
+
     click_for_cars
     expect(page).to have_selector('.car', count: 12)
 
@@ -54,10 +56,10 @@ feature "Integration Test", js: :true  do
   it "adds three cars on first click, three more on second, three more on third" do
     click_for_cars
     expect(page).to have_selector('.car', count: 9)
-    
+
     click_for_cars
     expect(page).to have_selector('.car', count: 12)
-    
+
     click_for_cars
     expect(page).to have_selector('.car', count: 15)
 
@@ -74,3 +76,5 @@ feature "Integration Test", js: :true  do
     expect(last_car_year).to eq("Year: 2013")
   end
 end
+
+Capybara.use_default_driver
