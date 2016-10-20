@@ -8,10 +8,11 @@ gem 'require_all'
 gem 'pry'
 gem 'shotgun'
 
-group :test do
+group :development, :test do
   gem 'rspec'
   gem 'capybara'
   gem 'rack-test'
   gem 'launchy'
-  gem 'selenium-webdriver'
+  gem 'selenium-webdriver', '~> 2.53.0'
+  gem 'jasmine'
 end
