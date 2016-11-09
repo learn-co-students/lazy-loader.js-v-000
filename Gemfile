@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+gem 'chromedriver-helper'
 gem 'sinatra'
 gem 'activerecord', :require => 'active_record'
 gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
