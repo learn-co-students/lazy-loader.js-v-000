@@ -1,5 +1,7 @@
 require_relative '../config/environment'
 require_relative '02-features/fixtures/spec_support'
+require 'capybara/poltergeist'
+Capybara.javascript_driver = :poltergeist
 
 # FIXME: Bundler.require should be configured
 # in config/environment
